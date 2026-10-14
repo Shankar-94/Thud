@@ -1,0 +1,69 @@
+/* ==========================================================================
+   neo-ui design tokens: Neobrutalism
+   Rules of the look: thick solid borders, hard offset shadows (no blur),
+   flat saturated fills, small radii, and controls that physically "press".
+   ========================================================================== */
+
+:root {
+  /* Palette (named, reusable) */
+  --neo-black: #000000;
+  --neo-white: #ffffff;
+  --neo-tomato: #ff5c39;
+  --neo-sun: #ffd93d;
+  --neo-mint: #3ddc97;
+  --neo-sky: #4da8ff;
+  --neo-violet: #a78bfa;
+
+  /* Semantic: light theme (default) */
+  --neo-paper: #f3f0ff;        /* page background */
+  --neo-surface: #ffffff;      /* inputs, cards */
+  --neo-text: #000000;
+  --neo-text-muted: #3f3a52;
+  --neo-line: #000000;         /* borders and shadows */
+  --neo-on-accent: #000000;    /* text on coloured fills stays black in every theme */
+  --neo-danger-text: #b42318;  /* error text with enough contrast on paper/surface */
+  --neo-focus: #0047ff;
+
+  /* Shape */
+  --neo-border-width: 3px;
+  --neo-border: var(--neo-border-width) solid var(--neo-line);
+  --neo-radius: 6px;
+
+  /* Hard shadows */
+  --neo-shadow-sm: 3px 3px 0 0 var(--neo-line);
+  --neo-shadow: 5px 5px 0 0 var(--neo-line);
+  --neo-shadow-lg: 8px 8px 0 0 var(--neo-line);
+
+  /* Type */
+  --neo-font: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --neo-text-sm: 0.875rem;
+  --neo-text-md: 1rem;
+  --neo-text-lg: 1.25rem;
+
+  /* Spacing (4px base) */
+  --neo-space-1: 4px;
+  --neo-space-2: 8px;
+  --neo-space-3: 12px;
+  --neo-space-4: 16px;
+  --neo-space-6: 24px;
+  --neo-space-8: 32px;
+
+  /* Motion */
+  --neo-press-duration: 90ms;
+}
+
+[data-theme='dark'] {
+  --neo-paper: #14121f;
+  --neo-surface: #221e33;
+  --neo-text: #ffffff;
+  --neo-text-muted: #c9c3de;
+  --neo-line: #ffffff;
+  --neo-danger-text: #ff8a70;
+  --neo-focus: #ffd93d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --neo-press-duration: 0ms;
+  }
+}

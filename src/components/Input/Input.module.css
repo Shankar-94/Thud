@@ -1,0 +1,63 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--neo-space-2);
+  font-family: var(--neo-font);
+  color: var(--neo-text);
+}
+
+.label {
+  font-weight: 700;
+  font-size: var(--neo-text-md);
+}
+.required {
+  font-weight: 500;
+  color: var(--neo-text-muted);
+}
+
+.input {
+  font-family: inherit;
+  font-size: var(--neo-text-md);
+  font-weight: 500;
+  color: var(--neo-text);
+  background: var(--neo-surface);
+  border: var(--neo-border);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow-sm);
+  padding: var(--neo-space-3) var(--neo-space-4);
+  min-height: 44px;
+  transition:
+    transform var(--neo-press-duration) ease-out,
+    box-shadow var(--neo-press-duration) ease-out;
+}
+.input::placeholder {
+  color: var(--neo-text-muted);
+  opacity: 1;
+}
+.input:focus-visible {
+  outline: 3px solid var(--neo-focus);
+  outline-offset: 3px;
+  transform: translate(-2px, -2px);
+  box-shadow: var(--neo-shadow);
+}
+.input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Invalid state: thicker, coloured shadow plus a text message (not colour alone) */
+.invalid {
+  box-shadow: 4px 4px 0 0 var(--neo-tomato);
+}
+
+.hint {
+  margin: 0;
+  font-size: var(--neo-text-sm);
+  color: var(--neo-text-muted);
+}
+.error {
+  margin: 0;
+  font-size: var(--neo-text-sm);
+  font-weight: 700;
+  color: var(--neo-danger-text);
+}
